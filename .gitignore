@@ -1,0 +1,27 @@
+# Editor settings
+.vscode/
+
+# R temporary files
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Data files
+data_output/
+data_input/
+
+# Logs, temp, cache
+*.log
+*.tmp
+*.cache
+*notes*
+
+# Other generated outputs
+*.coveragefin.txt
+
+# Bakups
+_*
