@@ -159,14 +159,33 @@ server <- function(input, output, session) {
 
   output$action_button <- renderUI({
     req(input$file)
-    actionButton(
-      "submit",
-      label = if (submit_status() == "processing") "Zpracovávám..." else "Zpracovat", # nolint
-      icon = if (submit_status() != "processing") icon("check") else NULL,
-      class = if (submit_status() == "processing") "btn btn-primary" else "btn btn-success", # nolint
-      style = "margin-top: 5px; width: 200px; font-size: 20px; padding: 10px;",
-      disabled = submit_status() == "processing"
-    )
+    # actionButton(
+    #   "submit",
+    #   label = if (submit_status() == "processing") "Zpracovávám..." else "Zpracovat", # nolint
+    #   icon = if (submit_status() != "processing") icon("check") else NULL,
+    #   class = if (submit_status() == "processing") "btn btn-primary" else "btn btn-success", # nolint
+    #   style = "margin-top: 5px; width: 200px; font-size: 20px; padding: 10px;",
+    #   disabled = submit_status() == "processing"
+    # )
+    is_processing <- submit_status() == "processing"
+    if (is_processing) {
+      actionButton(
+        "submit",
+        label = "Zpracovávám...", # nolint
+        icon = NULL,
+        class = "btn btn-primary",
+        style = "margin-top: 5px; width: 200px; font-size: 20px; padding: 10px;", # nolint
+        disabled = "disabled"
+      )
+    } else {
+      actionButton(
+        "submit",
+        label = "Zpracovat",
+        icon = icon("check"),
+        class = "btn btn-success",
+        style = "margin-top: 5px; width: 200px; font-size: 20px; padding: 10px;" # nolint
+      )
+    }
   })
 
   observeEvent(input$submit, {
