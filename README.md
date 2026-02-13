@@ -83,3 +83,15 @@ Tabulátorově oddělené soubory **.coveragefin.txt** se sloupci:
 - **Chybí OMIM anotace:** zkontrolujte cestu/oddělovač/kódování souboru v `reference/`.  
 - **Velikost nahrávání:** respektujte limit 30 MB na dávku.  
 - **Názvy sloupců a pořadí:** skript očekává přesně 6 sloupců výše.
+
+---
+
+Enjoy!
+
+<br>
+
+🍬 2025 · [@AnnBeny](https://github.com/AnnBeny)
+
+![Shiny](https://img.shields.io/badge/app-shiny-007FFF?style=for-the-badge)
+![domain](https://img.shields.io/badge/domain-bioinformatics-6A5ACD?style=for-the-badge)
+![python](https://img.shields.io/badge/python-3.10+-blue?style=for-the-badge)
